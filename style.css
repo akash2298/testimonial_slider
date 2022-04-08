@@ -1,0 +1,112 @@
+/* Import Google fonts for this project*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@300;400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Slider Styling*/
+
+section.testimonial{
+    width: 100%;
+    height: 100vh;
+}
+
+section.testimonial .slider{
+    width: 80%;
+    display: block;
+    margin: 100px auto;
+    position: relative;
+}
+
+section.testimonial .slider h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.185em;
+    color: #444444;
+    font-weight: 300;
+}
+
+section.testimonial .slider .slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: none;
+}
+
+section.testimonial .slider .slide.active{
+    display: flex;
+}
+
+section.testimonial .slider .content{
+    width: 45%;
+    position: relative;
+   /* animation: slide_content .4s linear .6s backwards; */
+}
+
+section.testimonial .slider .content p.review{
+    font-family: 'Fira Sans';
+    font-weight: 400;
+    font-size: 55px;
+    color: #3D3D3D;
+    font-style: normal;
+    margin-top: 80px;
+    animation: slide_content .4s linear .6s backwards;
+}
+
+section.testimonial .slider .content p.name{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 114%;
+    color: #000000;
+    font-style: normal;
+    position: absolute;
+    left: 0;
+    bottom: 150px;
+    animation: slide_content .6s linear .6s backwards;
+}
+
+section.testimonial .slider .content p.job{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 114%;
+    color: #444444;
+    font-style: normal;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    animation: slide_content .8s linear .6s backwards;
+}
+
+section.testimonial .slider .image{
+    width: 30%;
+    animation: slide_content .4s linear .6s backwards;
+}
+
+section.testimonial .slider .slide_nav{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+section.testimonial .slider .slide_nav #prev, section.testimonial .slider .slide_nav #next{
+    display: inline-block;
+    width: 64px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/*Animation*/
+ @keyframes slide_content{
+     0%{
+         opacity: 0;
+         transform: translateX(-50px);
+     }
+ }

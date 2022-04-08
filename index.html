@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Testimonial</title>
+</head>
+<body>
+    <!-- Testimonial Slider-->
+    <section class="testimonial">
+        <div class="slider">
+            <h2>Testimonial</h2>
+            <div class="slide active">
+                <div class="content">
+                    <p class="review">“This course helped me get off the ground. My mentor was also amazing.”</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="job">Job of the person</p>
+                </div>
+                <div class="image">
+                    <img src="images/people1.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <p class="review">“This course helped me get off the ground. My mentor was also amazing.”</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="job">Job of the person</p>
+                </div>
+                <div class="image">
+                    <img src="images/people2.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <p class="review">“This course helped me get off the ground. My mentor was also amazing.”</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="job">Job of the person</p>
+                </div>
+                <div class="image">
+                    <img src="images/people3.png" alt="">
+                </div>
+            </div>
+            <div class="slide">
+                <div class="content">
+                    <p class="review">“This course helped me get off the ground. My mentor was also amazing.”</p>
+                    <p class="name">Jane Doe</p>
+                    <p class="job">Job of the person</p>
+                </div>
+                <div class="image">
+                    <img src="images/people4.png" alt="">
+                </div>
+            </div>
+            <div class="slide_nav">
+
+                <div id="prev" onclick="prev()"><img src="images/prev.png" alt="Previous"></div>
+                <div id="next" onclick="next()"><img src="images/next.png" alt="Next"></div>
+                
+            </div>
+        </div>
+    </section>
+
+    <Script>
+
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        // Next Function
+        function next(){
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        
+        // Previous Function
+        function prev(){
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+
+    </Script>
+</body>
+</html>
